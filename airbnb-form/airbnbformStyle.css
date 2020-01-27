@@ -1,0 +1,64 @@
+body{
+    background-image: url( "imgs/3.jpg" );
+    background-size: cover;
+    background-position: center;
+}
+
+.wrap{
+    margin: 60px 25px ;
+    padding : 10px 10px 10px 10px;
+    background-color: white;
+    border-radius: 5px;
+    width : 500px;
+    height: 500px;
+}
+
+.form-title{
+   
+    margin: 20px;
+    padding: 0px 15px 0px 0px;
+}
+
+#main-form-small-titles{
+    font-size: 12px;
+}
+
+.search-btn{
+    margin: 20 0;
+}
+
+.mainform-search-btn{    
+    height : 50px;
+    background-color : #FF585D;
+    border : 0;
+    outline: 0;
+    margin-top: 30px;
+}
+
+.mainform-search-btn:hover{
+    background-color: #FF585D;
+}
+
+.set-width-parents{
+    width : 100%
+}
+
+.set-width-half{
+    margin-right: 0px;
+    max-width: 100%;
+    width: 49%;
+}
+
+.leftborder{
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+}
+
+.rightborder{
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+#inputState{
+    width: 50%;
+}

@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Child from './Child.js'
 
 
 // function App() {
@@ -25,11 +24,22 @@ import Child from './Child.js'
 //   );
 // }
 
-function App() {
-    return(
-     <Child></Child>
-    );
-  
-}
+function Aa() {
+    const [count, setCount] = useState(0);
+    console.log(count)
 
-export default App;
+    const handleOnClick = () => {
+        setCount([...count, count+1])
+    }
+    return(
+        <div>
+            <button onClick={handleOnClick}>
+                {count}
+            </button>
+        </div>
+    );
+}
+  
+
+
+export default Aa;

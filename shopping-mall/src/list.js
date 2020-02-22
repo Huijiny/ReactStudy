@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import List_cards from './list_card'
 import axios from 'axios';
 
-
 const Lists_constainer = styled.div`
     display: flex;
     flex-direction : row;
@@ -23,16 +22,11 @@ const List_main = () => {
 
     useEffect(() => {
         getCats();
-        console.log('캣 리스트');
     },[])
 
     return (
     <Lists_constainer>
         <List_cards data={catlist}></List_cards>
-        
-        {/* {
-            catlist.map((cat,index) => <div key={index}>{cat.name}</div>)
-        } */}
     </Lists_constainer>
 )};
 

@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState,useRef, useReducer} from 'react';
 import './App.css';
 
 
@@ -8,6 +8,7 @@ const PhoneForm = () => {
       name:'',
       phoneNumber:''
   });
+  const inputName = useRef();
  
   const {name, phoneNumber} = inputs;
   const onChange = (e) => {
@@ -22,14 +23,16 @@ const PhoneForm = () => {
           name:'',
           phoneNumber:''
       });
+      inputName.current.focus();
   };
   
   return (
-   <form>
+    <div>
      <input
         name="name"
         value={name}
         onChange={onChange}
+        ref={inputName}
      />
      <input 
         name="phoneNumber"
@@ -37,15 +40,14 @@ const PhoneForm = () => {
         onChange={onChange}
      />
      <div>
-     <button onClick={onReset}>리ㅣㅣㅣㅣㅣㅣ셋ㅅㅅ</button>
+     <button onClick={onReset}>RESET</button>
      </div>
      
      
      <div>이름 : {name}</div>
      
      <div>폰넘버 : {phoneNumber}</div>
-    
-   </form>
+    </div>
   );
 }
 

@@ -1,7 +1,12 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const Card_box = styled.div`
+
+const CardBoxContainer = styled.div`
+
+`
+
+const CardBox = styled.div`
     width: 300px;
     height: 250px;
     border-radius: 10px;
@@ -11,7 +16,7 @@ const Card_box = styled.div`
     flex-direction : column;
     margin : 10px ;
  `
-const Card_box_btn = styled.button`
+const CardBoxButton = styled.button`
     width: 100%;
     height: 50px;
     background : #ffd633;
@@ -42,23 +47,27 @@ const Img = styled.img`
 `
 
 
-const List_card = (props) => {
-    return(
-    <div>
+
+const List_card = ({data}) => {
+    return (
+    <CardBoxContainer>
         {
-            props.data.map((cat) => 
-            <Card_box key={cat._id}>
-                <Img src={cat.imageUrl}></Img>
-                <Name> {cat.name}</Name>
-                <Disc> {cat.age} </Disc>    
-                <Card_box_btn>
-                        담기
-                </Card_box_btn>
-            </Card_box>
+            data.map((cat,index) => 
+            <CardBox key={index}>
+                    <Img ></Img>
+                    <Name> {cat.name}</Name>
+                    <Disc> {cat.age}} </Disc>    
+                    <CardBoxButton>
+                            담기
+                    </CardBoxButton>
+                </CardBox>
             )
         }
-    </div>
+    </CardBoxContainer>
+
     )
-   }
+
+}
+
 
 export default List_card;

@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import List_cards from './list_card'
 import axios from 'axios';
 
-
 const Lists_constainer = styled.div`
     display: flex;
     flex-direction : row;

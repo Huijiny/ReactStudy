@@ -43,22 +43,22 @@ const Img = styled.img`
 
 
 const List_card = (props) => {
-    console.log("ddd");
+    return(
     <div>
         {
-
-    props.data.map((cat,index) => 
-            <Card_box key={index}>
-                <Img ></Img>
+            props.data.map((cat) => 
+            <Card_box key={cat._id}>
+                <Img src={cat.imageUrl}></Img>
                 <Name> {cat.name}</Name>
-                <Disc> {cat.age}} </Disc>    
+                <Disc> {cat.age} </Disc>    
                 <Card_box_btn>
                         담기
                 </Card_box_btn>
             </Card_box>
-    )
+            )
         }
     </div>
-   };
+    )
+   }
 
 export default List_card;

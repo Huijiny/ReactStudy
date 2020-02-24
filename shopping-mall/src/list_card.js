@@ -3,7 +3,11 @@ import styled, { css } from 'styled-components';
 
 
 const CardBoxContainer = styled.div`
-
+    display: flex;
+    flex-direction : row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: none;
 `
 
 const CardBox = styled.div`
@@ -45,19 +49,21 @@ const Img = styled.img`
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 `
-
+const goToCart = () => {
+    //console.log(id);
+}
 
 
 const List_card = ({data}) => {
     return (
     <CardBoxContainer>
         {
-            data.map((cat,index) => 
-            <CardBox key={index}>
-                    <Img ></Img>
+            data.map((cat) => 
+            <CardBox key={cat._id}>
+                    <Img src={cat.imageUrl}></Img>
                     <Name> {cat.name}</Name>
-                    <Disc> {cat.age}} </Disc>    
-                    <CardBoxButton>
+                    <Disc> {cat.age} </Disc>    
+                    <CardBoxButton onClick={goToCart}>
                             담기
                     </CardBoxButton>
                 </CardBox>

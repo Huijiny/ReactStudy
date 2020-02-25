@@ -7,8 +7,8 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import shoppingCart from './modules/shopping';
-
-const store = createStore(shoppingCart);
+import { composeWithDevTools } from 'redux-devtools-extension';
+const store = createStore(shoppingCart,composeWithDevTools());
 
 ReactDOM.render(
     <Provider store={store}>

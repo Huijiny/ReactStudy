@@ -71,7 +71,7 @@ const List_main = ({order, onSetCart}) => {
                    <Img src={cat.imageUrl}></Img>
                    <Name> {cat.name}</Name>
                    <Disc> {cat.age} </Disc>    
-                   <CardBoxButton onClick={onSetCart(cat)}>
+                   <CardBoxButton onClick={(e)=>onSetCart(cat)}>
                            담기
                    </CardBoxButton>
                </CardBox>
